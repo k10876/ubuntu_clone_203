@@ -22,13 +22,17 @@ ADD root/.gitconfig /root/.gitconfig
 ADD root/.scripts /root/.scripts
 
 # Set environment variables.
-ENV HOME /root
+# ENV HOME /root
 
 # Define working directory.
 WORKDIR /root
 
 # Open SSH port
 EXPOSE 22/tcp
+EXPOSE 443/tcp
+EXPOSE 3389
+EXPOSE 8080
+EXPOSE 19910
 
 # Define default command.
 CMD ["bash"]
